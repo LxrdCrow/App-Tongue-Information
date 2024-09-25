@@ -1,8 +1,8 @@
-# Tongue Information API
+# App Tongue Information 
 
 ## Descrizione
 
-Tongue Information è un sistema di API RESTful che permette di popolare un database con informazioni su post, utenti e interazioni. È progettato per fornire contenuti rapidi e accessibili da smartphone e consente la profilazione degli utenti e delle loro interazioni.
+Il progetto 'Tongue Information' si basa su un sistema di API RESTful che permette di popolare un database con informazioni su post, utenti e interazioni. È progettato per fornire contenuti rapidi e accessibili da smartphone e consente la profilazione degli utenti e delle loro interazioni.
 
 ### Funzionalità principali:
 - Inserimento, modifica e cancellazione di post.
@@ -61,9 +61,9 @@ Tongue Information è un sistema di API RESTful che permette di popolare un data
 - **POST** `/api/interaction` - Registra un'interazione.
 - **GET** `/api/interaction` - Filtra le interazioni per città e data.
 
-## Contribuzione
 
-Le pull request sono benvenute. Per problemi o suggerimenti, apri una segnalazione su GitHub.
+
+
 
 ## Licenza
 
