@@ -1,6 +1,3 @@
-Ecco il README formattato interamente con Markdown per il tuo progetto **Tongue Information API**:
-
-```markdown
 # Tongue Information API
 
 ## Descrizione
