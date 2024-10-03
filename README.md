@@ -2,16 +2,14 @@
 
 ## Descrizione
 
-Il progetto 'Tongue Information' è un sistema di API RESTful che consente di popolare un database con post, utenti e interazioni. Il progetto è ideato per processare grandi quantità di dati in modo efficiente, con controlli di sicurezza aggiuntivi e ottimizzazioni per le query.
+Il progetto 'Tongue Information' è un sistema di API RESTful che consente di popolare un database con post, utenti e interazioni. Il progetto è stato ottimizzato per garantire efficienza e sicurezza, includendo funzionalità di paginazione, validazione input, e rate limiting.
 
 ### Funzionalità principali:
 - Inserimento, modifica e cancellazione di post.
 - Gestione degli utenti con nickname, età e città.
-- Registrazione delle interazioni (like/commenti).
+- Registrazione, modifica ed eliminazione delle interazioni (like/commenti).
 - Filtraggio dei post per data e delle interazioni per città e data.
-- Rate Limiting per prevenire abusi sulle API.
-- Paginazione per una gestione ottimizzata dei dati restituiti.
-- Validazione degli input e verifica dell'esistenza di utenti.
+- Controlli di sicurezza e paginazione per migliorare la scalabilità.
 
 ## Tecnologie
 - **Node.js**
@@ -65,6 +63,8 @@ Il progetto 'Tongue Information' è un sistema di API RESTful che consente di po
 ### Interazioni
 - **POST** `/api/interaction` - Registra un'interazione.
 - **GET** `/api/interaction` - Filtra le interazioni per città e data con paginazione.
+- **PUT** `/api/interaction/:id` - Modifica un'interazione.
+- **DELETE** `/api/interaction/:id` - Elimina un'interazione.
 
 ## Sicurezza
 - **Rate Limiting**: Implementato per limitare il numero di richieste per prevenire abusi.
@@ -75,6 +75,3 @@ Il progetto 'Tongue Information' è un sistema di API RESTful che consente di po
 ## Licenza
 
 Questo progetto è distribuito sotto licenza Apache 2.0. Vedi il file [LICENSE](LICENSE) per maggiori dettagli.
-```
-
-
