@@ -32,7 +32,7 @@ Il progetto 'Tongue Information' è un sistema di API RESTful che consente di po
    ```env
    DB_HOST=localhost
    DB_USER=tuo_utente
-   DB_PASSWORD=la_tua_password
+   DB_PASSWORD=
    DB_NAME=nome_database
    ```
 
