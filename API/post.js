@@ -64,20 +64,28 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-//GET /api/posts - Get all posts
+// GET /api/posts - Get all posts
 router.get('/', async (req, res) => {
-  const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 10;
+  const page = parseInt(req.query.page) || 1; 
+  const limit = parseInt(req.query.limit) || 10; 
   const offset = (page - 1) * limit;
 
   try {
-    const [posts] = await pool.query(
-      'SELECT * FROM posts LIMIT ? OFFSET ?',
-      [limit, offset]
-    );
-    res.json(posts);
+      const [rows] = await pool.query('SELECT * FROM posts LIMIT ? OFFSET ?', [limit, offset]);
+      const [count] = await pool.query('SELECT COUNT(*) as total FROM posts');
+      const total = count[0].total;
+
+      res.json({
+          data: rows,
+          pagination: {
+              total,
+              page,
+              limit,
+              totalPages: Math.ceil(total / limit)
+          }
+      });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+      res.status(500).json({ error: error.message });
   }
 });
 
